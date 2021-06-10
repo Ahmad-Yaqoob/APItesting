@@ -19,11 +19,11 @@ for i in range(1, sheet.max_row):
         data_cell_value = data_cell.value
         print(data_cell_value)
         j = json.dumps(data_cell_value)
-        a = {
-           "email": "eve.holt@reqres.in",
-           "password": "cityslicka"
-            }
-        print(a)
+        # a = {
+        #    "email": "eve.holt@reqres.in",
+        #    "password": "cityslicka"
+        #     }
+        # print(a)
         url_cell = sheet.cell(row=i + 1, column=3)
         url_value = url_cell.value
         response = requests.post(url_value, data=data_cell_value)
